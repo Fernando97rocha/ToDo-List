@@ -1,0 +1,7 @@
+.complete-task{
+    text-decoration: line-through;
+}
+
+ul li{ 
+    list-style: none;
+}

@@ -4,18 +4,20 @@ const inputSubmit = document.querySelector('.submit')
 
 
 inputSubmit.addEventListener('click', () => {
-    const li = document.createElement('li')
-    li.textContent = `${inputText.value}`
-    li.classList.add('item')
-    ul.append(li)
-    
-    inputText.value = ''
+    if (inputText.value !== '') {
+        const li = document.createElement('li')
+	    li.innerHTML = `<input type="checkbox"><span>${inputText.value}</span> <button>x</button>`
+
+	    li.classList.add('item', 'list')
+	    ul.append(li)
+        inputText.value = ''
+    } else;
 })
 
 ul.addEventListener('click', event => {
     const clickedElement = event.target
 
-    if (clickedElement.tagName === 'LI') {
-        clickedElement.remove()
+    if (clickedElement.tagName === 'BUTTON') {
+        clickedElement.parentElement.remove()        
     }
 })
