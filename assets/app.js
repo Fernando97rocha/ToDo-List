@@ -4,16 +4,18 @@ const inputSubmit = document.querySelector('.submit')
 
 
 inputSubmit.addEventListener('click', () => {
-    if (inputText.value !== '') {
-        const li = document.createElement('li')
-        li.textContent = `${inputText.value}`
-        li.classList.add('item')
-        ul.append(li)
-    } else;
+    const li = document.createElement('li')
+    li.textContent = `${inputText.value}`
+    li.classList.add('item')
+    ul.append(li)
+    
     inputText.value = ''
 })
 
-const lis = ul.children
+ul.addEventListener('click', event => {
+    const clickedElement = event.target
 
-
-
+    if (clickedElement.tagName === 'LI') {
+        clickedElement.remove()
+    }
+})
