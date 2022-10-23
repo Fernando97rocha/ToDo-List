@@ -1,7 +1,47 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .complete-task{
     text-decoration: line-through;
 }
 
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
 ul li{ 
     list-style: none;
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    margin-top: 5%;
+}
+
+span{
+    width: 100%;
+    display: flex;
+}
+
+button{
+    /* margin-left: ; */
+}
+
+.div-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 25%;
 }
