@@ -6,7 +6,7 @@ const inputSubmit = document.querySelector('.submit')
 inputSubmit.addEventListener('click', () => {
     if (inputText.value !== '') {
         const li = document.createElement('li')
-	    li.innerHTML = `<span><input type="checkbox">${inputText.value}</span><button>x</button>`
+	    li.innerHTML = `<span class="task-span"><input type="checkbox" class="checkbox">${inputText.value}</span><button>x</button>`
 
 	    li.classList.add('item', 'list')
 	    ul.prepend(li)
