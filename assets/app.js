@@ -6,10 +6,10 @@ const inputSubmit = document.querySelector('.submit')
 inputSubmit.addEventListener('click', () => {
     if (inputText.value !== '') {
         const li = document.createElement('li')
-	    li.innerHTML = `<input type="checkbox"><span>${inputText.value}</span> <button>x</button>`
+	    li.innerHTML = `<span><input type="checkbox">${inputText.value}</span><button>x</button>`
 
 	    li.classList.add('item', 'list')
-	    ul.append(li)
+	    ul.prepend(li)
         inputText.value = ''
     } else;
 })
@@ -20,4 +20,9 @@ ul.addEventListener('click', event => {
     if (clickedElement.tagName === 'BUTTON') {
         clickedElement.parentElement.remove()        
     }
+
+    if (clickedElement.tagName === 'INPUT') {
+        clickedElement
+    }
 })
+
