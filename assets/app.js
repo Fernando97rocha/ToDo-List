@@ -11,6 +11,7 @@ inputSubmit.addEventListener('click', () => {
 	    li.classList.add('item', 'list')
 	    ul.prepend(li)
         inputText.value = ''
+        inputText.focus()
     } else;
 })
 
@@ -29,6 +30,7 @@ ul.addEventListener('click', event => {
         let valueToEdit = firstChildParentElement.textContent
         inputText.value = valueToEdit
         parentElement.remove()
+        inputText.focus()
     }
 })
 
