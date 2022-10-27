@@ -125,6 +125,10 @@ button:hover{
     transition: .4s;
 }
 
+.edit-button{
+    width: 20%;
+}
+
 .div-main{
     min-width: 500px;
     max-width: 600px;
