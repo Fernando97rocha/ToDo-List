@@ -20,9 +20,5 @@ ul.addEventListener('click', event => {
     if (clickedElement.tagName === 'BUTTON') {
         clickedElement.parentElement.remove()        
     }
-
-    if (clickedElement.tagName === 'INPUT') {
-        clickedElement
-    }
 })
 
